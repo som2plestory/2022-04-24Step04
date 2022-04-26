@@ -2,16 +2,17 @@ package 평균은넘겠지;
 
 import java.util.Scanner;
 
-public class Main_X {
+public class Main_2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
 		int C=sc.nextInt();	//C : 반(케이스) 수
-		int sum=0;	//반 학생들의 점수 합계
+		int sum;	//반 학생들의 점수 합계
 		double mean=0;
 		int overN=0;
 		int[] studentN = new int[C]; //(반별 학생수)
 		for(int i=0; i<C; i++) { //반별 계산 
+			sum=0;
 			studentN[i] = sc.nextInt(); //반 학생수
 			int[] scoreN = new int[studentN[i]]; // (학생별 점수)
 			for(int j=0; j<scoreN.length; j++) { //  
@@ -26,10 +27,8 @@ public class Main_X {
 			}
 	        double studentR = (double)overN/studentN[i]; // 비율 : 평균이상학생수/학생수
 	        double percent = studentR*100; //위 비율을 백분율로 환산
-	        System.out.println(String.format("%.3f",percent)+ "%");
+	        System.out.println(String.format("%.3f",percent+0.000001)+ "%");
 		}
-		
-		
 		
 		sc.close();
 	}
