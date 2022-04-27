@@ -13,7 +13,6 @@ public class Main {
 		for(i=0; i<mArray.length; i++) {
 			mArray[i]=sc.nextInt();
 		}
-		sc.close();
 		
 		int max=mArray[0];
 		for(i=0; i<mArray.length; i++) {
@@ -28,6 +27,6 @@ public class Main {
 				System.out.println(i+1);
 			}
 		}
-		
+		sc.close();
 	}
 }
